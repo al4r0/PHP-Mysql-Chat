@@ -1,8 +1,8 @@
 <?php
-$ip_sql = "127.0.0.1";
-$sql_user = "root";
-$sql_pass = "alvaro1";
-$sql_db = "chat";
+$ip_sql = "Host";
+$sql_user = "Usuario";
+$sql_pass = "Contraseña";
+$sql_db = "Nombre_DB";
 
 
 $conec = @mysql_connect($ip_sql, $sql_user, $sql_pass);
