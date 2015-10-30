@@ -23,7 +23,7 @@ if(!empty($_POST['usuario'])){
 if(!empty($_POST['email'])){
 
 if ($pass == $pass2) { 
-if (preg_match('{^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z])$}',$email)){
+if (preg_match('{^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z0-9-])$}',$email)){
 $consulta="SELECT user FROM usuarios WHERE user='$user'";
 $resultado=mysql_query($consulta);
 if (mysql_num_rows($resultado)>0)
