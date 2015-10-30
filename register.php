@@ -23,7 +23,7 @@ if(!empty($_POST['usuario'])){
 if(!empty($_POST['email'])){
 
 if ($pass == $pass2) { 
-if (preg_match('{^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$}',$email)){
+if (preg_match('{^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z])$}',$email)){
 $consulta="SELECT user FROM usuarios WHERE user='$user'";
 $resultado=mysql_query($consulta);
 if (mysql_num_rows($resultado)>0)
@@ -65,10 +65,10 @@ exit();
 
 }
 } else {
-echo '<div id="error">Ese correo no es válido</div>';
+echo '<div id="error">Ese correo no es vÃ¡lido</div>';
 }
 } else {
-echo '<div id="error">Las contraseñas no coinciden<br></div>';
+echo '<div id="error">Las contraseÃ±as no coinciden<br></div>';
 }
 }else {
 echo '<div id="error">No dejes campos en blanco<br></div>';
@@ -89,8 +89,8 @@ echo '<div id="error">No dejes campos en blanco<br></div>';
 <div id="login">
 <form action="" method="post">
 <p>Usuario: </p><input type="text" name="usuario"><br>
-<p>Contraseña: </p><input type="password" name="password"><br>
-<p>Repetir contraseña: </p><input type="password" name="password2"><br>
+<p>ContraseÃ±a: </p><input type="password" name="password"><br>
+<p>Repetir contraseÃ±a: </p><input type="password" name="password2"><br>
 <p>Correo: </p><input type="text" name="email"><br>
 <input type="submit" value="Registrar">
 </form>
