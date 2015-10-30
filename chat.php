@@ -23,10 +23,10 @@ mysql_query("INSERT INTO chats (id, id_usuario, texto) VALUES (NULL, '$user_id',
 }
 ?>
 <head>
-<title>Chat</title>
+<title>Chat - <?php echo $result; ?></title>
 
-
-<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+<link rel="stylesheet" type="text/css" href="estilo.css">
+<script type="text/javascript" src="jquery-2.1.0.min.js"></script>
 <script type="text/javascript">
 $.ajaxSetup({
 'beforeSend' : function(xhr) {
@@ -63,35 +63,7 @@ function iSubmitEnter(oEvento, oFormulario){
 </script>
 
 <style type="text/css">
-#chat
-{
-    float: top;
-    margin: 5px;
-}
-#chat textarea
-{
-    width:100%;
-    height:85%;
-    resize: none;
-}
-#enviar
-{
-    float: top;
-    margin: 5px;
-}
-#enviar textarea
-{
-    float: left;
-    width:80%;
-    height:10%;
-    resize: none;
-}
-#enviar input
-{
-    float: left;
-    width:10%;
-    height:10%;
-}
+
 </style>
 </head>
 <body onload="verChat()">
@@ -101,7 +73,7 @@ function iSubmitEnter(oEvento, oFormulario){
 </div>
 <div id="enviar">
 <form action="" method="post" id="form1" name="form1">
-<textarea name="texto" onkeypress="iSubmitEnter(event, document.form1)"></textarea>
+<textarea name="texto" onkeypress="iSubmitEnter(event, document.form1)" autofocus></textarea>
 <input type="submit" value="Enviar">
 <input type="button" value="Recargar" onClick="window.location.href=window.location.href">
 </form>

@@ -1,12 +1,19 @@
 <html>
 <head>
 <title>Chat - Login</title>
+<link rel="stylesheet" type="text/css" href="estilo.css">
 </head>
 <body>
 <center>
 
 <?php
 include("config.php");
+
+if (($_SESSION['login']) != 0){
+header("Location: chat.php");
+} else {
+
+}
 
 if (isset($_POST['usuario'],$_POST['password'])){
 $pass = mysql_real_escape_string($_POST['password']);
@@ -34,17 +41,21 @@ exit();
 }
 }
 else {
-echo "Usuario y contraseña no coinciden";
+echo '<div id="error">Usuario y contraseña no coinciden</div>';
 }
 }
 
 ?>
 
+<div id="login">
+
 <form action="" method="post">
-Usuario: <input type="text" name="usuario">
-Contraseña: <input type="password" name="password"><br><br>
-<input type="submit" value="Enviar">
-<input type="button" value="Registrar" onClick="window.location.href='register.php'">
+<p align="right">Usuario: </p><input type="text" name="usuario"><br><br>
+<p align="right">Contraseña: </p><input type="password" name="password"><br><br>
+<input type="submit" value="Entrar">
+<input type="button" value="Registrarse" onClick="window.location.href='register.php'">
+
+</div>
 
 </center>
 </body>

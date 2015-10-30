@@ -1,0 +1,56 @@
+#chat
+{
+    float: top;
+    margin: 5px;
+}
+#chat textarea
+{
+	margin-top:auto;
+    width:100%;
+    height: 77%;
+    resize: none;
+}
+#enviar
+{
+    float: top;
+    margin: 5px;
+}
+#enviar textarea
+{
+    float: left;
+    width:80%;
+    height:10%;
+    resize: none;
+}
+#enviar input
+{
+    float: left;
+    width:10%;
+    height:10%;
+}
+#login
+{
+	width:600px;
+	margin-top: 200px;
+	margin-left:auto;
+	margin-right:auto;
+}
+#login p
+{
+	display: inline-block;
+ 	text-align: left;
+	width: 200px;
+	margin: auto;
+}
+#login input[type="text"]
+{
+	margin:auto;
+}
+#login input[type="password"]
+{
+	margin:auto;
+}
+#error
+{
+color: red;
+}

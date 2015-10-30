@@ -1,9 +1,10 @@
 <html>
 <head>
 <title>Chat - Registro</title>
+<link rel="stylesheet" type="text/css" href="estilo.css">
 </head>
 <body>
-
+<center>
 <?php
 include("config.php");
 
@@ -64,34 +65,36 @@ exit();
 
 }
 } else {
-echo "Ese correo no es válido";
+echo '<div id="error">Ese correo no es válido</div>';
 }
 } else {
-echo "Las contraseñas no coinciden<br>";
+echo '<div id="error">Las contraseñas no coinciden<br></div>';
 }
 }else {
-echo "No dejes campos en blanco<br>";
+echo '<div id="error">No dejes campos en blanco<br></div>';
 }
 }else {
-echo "No dejes campos en blanco<br>";
+echo '<div id="error">No dejes campos en blanco<br></div>';
 }
 }else {
-echo "No dejes campos en blanco<br>";
+echo '<div id="error">No dejes campos en blanco<br></div>';
 }
 }else {
-echo "No dejes campos en blanco<br>";
+echo '<div id="error">No dejes campos en blanco<br></div>';
 }
 }
 
 
 ?>
-
+<div id="login">
 <form action="" method="post">
-Usuario: <input type="text" name="usuario"><br>
-Contraseña: <input type="password" name="password"><br>
-Repetir contraseña: <input type="password" name="password2"><br>
-Correo: <input type="text" name="email"><br>
+<p>Usuario: </p><input type="text" name="usuario"><br>
+<p>Contraseña: </p><input type="password" name="password"><br>
+<p>Repetir contraseña: </p><input type="password" name="password2"><br>
+<p>Correo: </p><input type="text" name="email"><br>
 <input type="submit" value="Registrar">
 </form>
+</div>
+</center>
 </body>
 </html>
